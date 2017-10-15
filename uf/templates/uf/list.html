@@ -1,0 +1,15 @@
+<h1>UF Listing</h1>
+<ul>
+	<table>
+	<tr>
+    <th>UF Date</th>
+    <th>Value</th> 
+  	</tr>
+	{% for uf in ufList.all %}
+	<tr>
+	<td>{{ uf.publishedDate }}</td>
+	<td>{{ uf.ufValue }}</td>
+	</tr>
+	{% endfor %}
+	</table>
+</ul>

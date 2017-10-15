@@ -1,0 +1,45 @@
+{% load static from staticfiles %}
+
+<h2>Functionality Testing for CFO Remoto</h2>
+<ul>
+	<table width="600">
+	<tr style="color: #fff; background: #0067BD;"> 
+    <th>Functionality</th>
+    <th>Comments</th> 
+  	</tr>
+  	
+	<tr bgcolor="E3E3E3">
+	<td><a href="{% url 'uf:list' %}">List view </a></td>
+	<td>Displays the UF data from the local DB as a list.</td>
+	</tr>
+
+	<tr bgcolor="CFCFCF">
+	<td><a href="{% url 'uf:price' %}?value=1.5&date=20121221">Price View</a></td>
+	<td>Displays the price data at a specific date.<p>The assumption is that the display result is UF * [value]</td>
+	</tr>
+
+	</table>
+
+<p>
+<p>
+
+	<table width="600">
+
+	<tr style="color: #fff; background: #0067BD;"> 
+    <th>Admin Functions</th>
+    <th>Comments</th> 
+  	</tr>
+
+	<tr bgcolor="E3E3E3">
+	<td><a href="{% url 'uf:clearDB' %}">Clear the Database</a></td>
+	<td>This will clear all entries in the database and making a call to retrieve will import all Historical UF data</td>
+	</tr>
+
+	<tr bgcolor="CFCFCF">
+	<td><a href="{% url 'uf:retrieveUF' %}">Gather UF data from bcentral site</a></td>
+	<td>This will clear all entries in the database and making a call to retrieve will import all Historical UF data</td>
+	</tr>
+
+	</table>
+</ul>
+
